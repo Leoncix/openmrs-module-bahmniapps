@@ -133,24 +133,11 @@
                 <ng-include src="'views/age.html'"></ng-include>
             </div>
         </section>
-        <legend class="registraion_legend">
-            <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
-        </legend>
-
-        <section address-fields data-address-levels="::addressLevels" data-address="patient.address"
-                 field-validation="::fieldValidation"
-                 strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"
-                 ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
-
-        <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address"
-                 field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown"
-                 strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
-
         <legend class="registraion_legend" ng-if="patient.extraIdentifiers.length>0">
             <span class="mylegend">{{ ::'REGISTRATION_ADDTIONAL_IDENTIFIERS' | translate}}</span>
         </legend>
 
-        <section>
+           <section>
             <!--edit patient flow-->
            <section>
                 <div ng-if="patient.uuid != undefined">
@@ -221,6 +208,20 @@
                 </div>
            </section>
         </section>
+
+        <legend class="registraion_legend">
+            <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
+        </legend>
+
+        <section address-fields data-address-levels="::addressLevels" data-address="patient.address"
+                 field-validation="::fieldValidation"
+                 strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"
+                 ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
+
+        <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address"
+                 field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown"
+                 strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
+
 
         <legend class="registraion_legend" ng-if="patientConfiguration.customAttributeRows().length > 0">
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
