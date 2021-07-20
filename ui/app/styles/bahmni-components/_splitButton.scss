@@ -13,7 +13,7 @@
             box-shadow:1px 2px 2px #6B6969;
             float: none;
             z-index: 9999;
-            background: #8eb82a;
+            background: #9999ff;
             border-bottom: none;
             color: #fff;
             clear: both;
@@ -30,7 +30,7 @@
             }
             &.secondaryOption {
                 display: none;
-                border-bottom: 1px solid #699007;
+                border-bottom: 1px solid #333399;
                 background: none;
                 &:last-child {
                     border-bottom: 1px solid $lightGray;
